@@ -1,0 +1,160 @@
+@font-face {
+    font-family: SpaceMono;
+    src: url(fonts/SpaceMono-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SpaceMono;
+}
+body > h1{
+    text-transform: uppercase;
+    color: hsl(189, 41%, 97%);
+    margin: 10% auto 3%;
+
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+    text-align: center;
+
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    margin: 20px auto;
+
+}
+
+.left-box{
+    display: grid;
+    margin: 2rem;
+    height: fit-content;
+    width: 300px;
+    gap: 1rem;
+}
+.right-box{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2.5fr;
+    background-color: hsl(183, 100%, 15%);
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    row-gap: 1rem;
+    width: 300px;
+}
+
+input{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-align: right;
+    padding-right: 5px;
+    height: 30px;
+}
+
+input[type=text]:focus{
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.bill-box, .numPeople-box{
+    position: relative;
+}
+
+.bill-box input[type="text"]{
+    padding-right: 5px;
+    text-align: right;
+}
+
+.numPeople-box input[type="text"]{
+    text-align: right;
+    padding-right: 5px;
+}
+
+.bill-box img{
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.numPeople-box img{
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.bill-box input[type="text"]:focus + img {
+    color: dodgerblue;
+}
+
+.numPeople-box input[type="text"]:focus + img {
+    color: dodgerblue;
+}
+
+.left-box h3{
+    color: hsl(185, 41%, 84%);
+}
+
+.select-tip-box{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    text-align: center;
+}
+
+.select-tip-box h3{
+    display: block;
+    grid-column: 1/-1;
+    justify-self: start;    
+}
+
+.select-tip-box button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 5px;
+}
+
+.select-tip-box input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+
+.pushed{
+    background-color: green !important;
+    color: black !important;
+}
+
+.left-box input{
+    background-color: hsl(189, 41%, 97%);
+    border: 0;
+}
+
+.tip-amount-box, .total-amount-box{
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.reset-box{
+    display: flex;
+}
+.reset-box button{
+    align-self: flex-end;
+    flex: 1;
+    height: 30%;
+}
